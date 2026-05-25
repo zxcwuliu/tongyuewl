@@ -690,19 +690,20 @@ color: #333333;
   margin: 0;
   line-height: 1.8em;
   font-weight: 400;
+  word-wrap: break-word;
+  word-break: break-all;
+  /* 默认大屏：无高度限制，全部显示 */
+  max-height: none;
+  overflow: visible;
 }
-/*-- footer --*/
-.footer{
-	padding:3em 0;
-	background:#292929;
-}
-.footer-left ul{
-	padding:0;
-	margin:0;
-}
-.footer-left ul li{
-	display:inline-block;
-	margin:0 1em;
+
+/* 屏幕宽度小于等于768px 小屏/缩小窗口时，只显示3行 */
+@media (max-width: 768px) {
+  .news-info p {
+    /* 单行高度 14*1.8，3行高度 */
+    max-height: 75.6px;
+    overflow: hidden;
+  }
 }
 .footer-left ul li:nth-child(1){
 	margin-left:0;
