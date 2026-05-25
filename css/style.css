@@ -705,6 +705,11 @@ color: #333333;
     overflow: hidden;
   }
 }
+/*-- footer --*/
+.footer{
+	padding:3em 0;
+	background:#292929;
+}
 .footer-left ul li:nth-child(1){
 	margin-left:0;
 }
